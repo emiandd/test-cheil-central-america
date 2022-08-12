@@ -29,6 +29,7 @@ export default function Results() {
 						category={h.category}
 						photos={h.photos}
 						price={h.price}
+						ratings={h.ratings}
 					/>
 				)
 			}
