@@ -1,4 +1,6 @@
 import s from '../css/Card.module.css';
+import Images from './Images.jsx';
+import Stars from './Stars.jsx';
 import { useEffect } from 'react';
 let hotelsToCompare = [];
 
@@ -12,21 +14,30 @@ export default function Card({name, averageRating, category, photos, price, rati
 	const handleCheckBox = (e) => {
 		if(e.target.checked){
 			hotelsToCompare.push(hotel);
-			console.log(hotelsToCompare)
 			localStorage.setItem('hotelsToCompare', JSON.stringify(hotelsToCompare))
-			// hotelsToCompare = [];
+		}else{
+			hotelsToCompare = hotelsToCompare.filter( h => h.name !== name)
+			localStorage.setItem('hotelsToCompare', JSON.stringify(hotelsToCompare))
 		}
 	}	
+
+	useEffect(() => {
+		return () => {
+			hotelsToCompare = [];
+		};
+	}, [])
 
 	return (
 		<div className={s.card}>
 			<div className={s.img}>
-				<img src={photos[0]} alt=""/>
+				<Images photos={photos} name={name} />
 			</div>
 			<div className={s.center}>
-				<p>{name}</p>
-				<p>{averageRating}</p>
-				<p>{category} stars</p>
+				<p className={s.name}>{name}</p>
+				<p className={s.averageRating}>{averageRating}</p>
+				<p className={s.dues}>Up to 12 payments without interest</p>
+				<p className={s.optionPayments}>See payment methods</p>
+				<p><Stars category={category}/></p>
 			</div>
 			<div className={s.right}>
 				<p>Price</p>

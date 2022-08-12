@@ -1,6 +1,10 @@
 .main {
-  border: 0.1rem solid orange;
   height: auto;
   display: flex;
   padding: 5rem 0;
+}
+@media (max-width: 767px) {
+  .main {
+    flex-direction: column;
+  }
 }

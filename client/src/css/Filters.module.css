@@ -1,5 +1,22 @@
 .container {
-  border: 0.1rem solid red;
   width: 20%;
   text-align: center;
+  padding: 0 2rem;
+  padding-top: 2rem;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    padding-bottom: 5rem;
+  }
+}
+.container div p {
+  background-color: purple;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem 0;
+  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  font-weight: bold;
 }

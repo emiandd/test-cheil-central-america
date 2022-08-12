@@ -1,10 +1,9 @@
-import { useEffect } from "react";
 import ReactApexChart from "react-apexcharts";
-import { hotelsToCompare } from '../components/Card.jsx';
 
 export default function HotelCompare(){
 
     let hotels = localStorage.hotelsToCompare;
+
     hotels = JSON.parse(hotels);
 
     let week1 = hotels.map( h => h.ratings.map( r => r.score));
@@ -86,8 +85,6 @@ export default function HotelCompare(){
           offsetX: 40
         }
       },
-    
-    
     };
 
     return (

@@ -1,28 +1,92 @@
+@import "variables";
+
 .card{
-	border: .1rem solid green;
+	background-color: white;
 	width: 85rem;
 	height: 30rem;
 	display: flex;
-	border-radius: 1rem;
+	border-radius: .7rem;
 	overflow: hidden;
+	transition: all .3s ease;
+
+	@media @phone{
+		flex-direction: column;
+		width: 95%;
+		height: auto;
+	}
+
+	&:hover{
+		box-shadow: 0 0 3rem -1.2rem;
+
+	}
 
 	.img{
 		width: 25rem;
-		border: .1rem solid orange;
+		height: 100%;
+
+		@media @phone{
+			width: 100%;
+		}
+
+		img{
+			height: 30rem;
+		}
 	}
 
 	.center{
-		border: .1rem solid red;
+		border-left: .1rem solid gray;
+		border-right: .1rem solid gray;
 		width: 40rem;
 
-		p:first-of-type{
-			font-weight: bold;
-			margin-top: 2.5rem;
+		@media @phone{
+			border: 0;
+			border-bottom: .1rem solid gray;
+			padding-bottom: 2rem;
+			width: 100%;
 		}
 
 		p{
-			margin-left: 3rem;
-			margin-bottom: 2rem;
+			margin-top: 2rem;
+			margin-left: 2rem;
+		}
+
+		.name{
+			height: 5rem;
+			font-size: 2.2rem;
+			font-weight: bold;
+
+			@media @phone{
+				width: 30rem;
+			}
+		}
+		.dues,
+		.optionPayments{
+			font-size: 1.3rem;
+		}
+
+		.dues{
+			margin-top: 7.5rem;
+
+			@media @phone{
+				margin-top: 2rem;
+			}
+		}
+
+		.optionPayments{
+			color: purple;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.averageRating{
+			background-color: purple;
+			width: 3rem;
+			text-align: center;
+			color: white;
+			border-radius: .3rem;
+			padding: .2rem 0;
+			font-size: 1.5rem;
+			font-weight: bold;
 		}
 	}
 
@@ -41,5 +105,4 @@
 			font-size: 1.4rem;
 		}
 	}
-
 }

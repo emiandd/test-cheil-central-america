@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import s from '../css/Results.module.css';
 import Card from '../components/Card.jsx';
 import { getAllHotels } from '../redux/actions.js';
+import Button from '../components/Button.jsx';
 
 export default function Results() {
 
@@ -16,12 +17,16 @@ export default function Results() {
 
 	return (
 		<div className={s.container}>
+
+			<Button text='Compare Hotels' url='/compare' />
+		
 			{	
 				hotels.error ?
 
 				<p>No data found</p>
 
 				: hotels?.map( h => 
+
 					<Card 
 						key={h.id}
 						name={h.name}

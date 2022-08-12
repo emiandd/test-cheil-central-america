@@ -1,0 +1,17 @@
+.stars div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (max-width: 767px) {
+  .stars div {
+    width: 15rem;
+    justify-content: flex-start;
+  }
+}
+.stars div p {
+  margin: 0 !important;
+  fill: orange;
+  width: 2rem;
+}

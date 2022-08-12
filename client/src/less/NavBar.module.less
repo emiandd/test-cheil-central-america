@@ -1,9 +1,15 @@
+@import "variables";
+
 nav{
 	background-color: black;
 	height: 8rem;
 	display: flex;
 	align-items: center;
 	padding: 0 6rem;
+
+	@media @phone{
+		justify-content: center;
+	}
 
 	h1{
 		font-size: 4rem;

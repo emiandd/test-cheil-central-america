@@ -1,26 +1,87 @@
 .card {
-  border: 0.1rem solid green;
+  background-color: white;
   width: 85rem;
   height: 30rem;
   display: flex;
-  border-radius: 1rem;
+  border-radius: 0.7rem;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .card {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+}
+.card:hover {
+  box-shadow: 0 0 3rem -1.2rem;
 }
 .card .img {
   width: 25rem;
-  border: 0.1rem solid orange;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .card .img {
+    width: 100%;
+  }
+}
+.card .img img {
+  height: 30rem;
 }
 .card .center {
-  border: 0.1rem solid red;
+  border-left: 0.1rem solid gray;
+  border-right: 0.1rem solid gray;
   width: 40rem;
 }
-.card .center p:first-of-type {
-  font-weight: bold;
-  margin-top: 2.5rem;
+@media (max-width: 767px) {
+  .card .center {
+    border: 0;
+    border-bottom: 0.1rem solid gray;
+    padding-bottom: 2rem;
+    width: 100%;
+  }
 }
 .card .center p {
-  margin-left: 3rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.card .center .name {
+  height: 5rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .card .center .name {
+    width: 30rem;
+  }
+}
+.card .center .dues,
+.card .center .optionPayments {
+  font-size: 1.3rem;
+}
+.card .center .dues {
+  margin-top: 7.5rem;
+}
+@media (max-width: 767px) {
+  .card .center .dues {
+    margin-top: 2rem;
+  }
+}
+.card .center .optionPayments {
+  color: purple;
+  font-weight: bold;
+  cursor: pointer;
+}
+.card .center .averageRating {
+  background-color: purple;
+  width: 3rem;
+  text-align: center;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .card .right p:first-of-type {
   margin-top: 2.5rem;

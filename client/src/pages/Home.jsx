@@ -3,6 +3,9 @@ import Button from '../components/Button.jsx';
 import '../css/Home.module.css';
 
 export default function Home() {
+
+	localStorage.removeItem('hotelsToCompare');
+	
 	return (
 		<>
 			<NavBar />

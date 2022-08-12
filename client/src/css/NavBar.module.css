@@ -5,6 +5,11 @@ nav {
   align-items: center;
   padding: 0 6rem;
 }
+@media (max-width: 767px) {
+  nav {
+    justify-content: center;
+  }
+}
 nav h1 {
   font-size: 4rem;
   color: white;

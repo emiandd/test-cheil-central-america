@@ -1,0 +1,21 @@
+@import "variables";
+
+.stars{
+	div{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+
+		@media @phone{
+			width: 15rem;
+			justify-content: flex-start;
+		}
+
+		p{
+			margin: 0 !important;
+			fill: orange;
+			width: 2rem;
+		}
+	}
+}

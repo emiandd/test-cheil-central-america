@@ -10,7 +10,6 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/search' element={<SearchResults />} />
       <Route path='/compare' element={<ResultsCompare />} />
-
     </Routes>
   );
 }
