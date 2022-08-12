@@ -6,6 +6,8 @@ const getHotelsByCategory = async (category) => {
 
 	const allHotels = await Hotel.findAll();
 
+	if(category.includes('Select')) return allHotels;
+
 	if(allHotels){
 		const hotelsByCategory = allHotels.filter( h => h.dataValues.category === Number(category));
 		if(hotelsByCategory.length === 0) throw 'No hotels with that category';

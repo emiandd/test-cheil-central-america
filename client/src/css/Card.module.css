@@ -1,0 +1,36 @@
+.card {
+  border: 0.1rem solid green;
+  width: 85rem;
+  height: 30rem;
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card .img {
+  width: 25rem;
+  border: 0.1rem solid orange;
+}
+.card .center {
+  border: 0.1rem solid red;
+  width: 40rem;
+}
+.card .center p:first-of-type {
+  font-weight: bold;
+  margin-top: 2.5rem;
+}
+.card .center p {
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+.card .right p:first-of-type {
+  margin-top: 2.5rem;
+  font-weight: bold;
+}
+.card .right p,
+.card .right input {
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+.card .right p:last-of-type {
+  font-size: 1.4rem;
+}
